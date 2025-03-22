@@ -1,0 +1,21 @@
+let
+    源 = (txt as text,apikey as text,region as text,language as text) => let
+        Source = Json.Document(Web.Contents("https://api.cognitive.microsofttranslator.com/", [RelativePath="translate", Query=[
+                    #"api-version" = "3.0",
+                    to = language
+                ], Headers=[#"Ocp-Apim-Subscription-Key"=apikey, #"Ocp-Apim-Subscription-Region"=region, #"Content-Type"="application/json"], Content=Json.FromValue({[Text =txt]})])),
+        Source1 = Source{0},
+        translations = Source1[translations],
+        translations1 = translations{0},
+        转换为表 = Record.ToTable(translations1),
+        转置表 = Table.Transpose(转换为表),
+        提升的标题 = Table.PromoteHeaders(转置表, [PromoteAllScalars=true]),
+        更改的类型 = Table.TransformColumnTypes(提升的标题,{{"text", type text}, {"to", type text}}),
+        重排序的列 = Table.ReorderColumns(更改的类型,{"to", "text"}),
+        删除的列 = Table.RemoveColumns(重排序的列,{"to"})
+    in
+        删除的列
+in
+    源
+
+M语言代码
