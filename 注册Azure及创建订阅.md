@@ -11,6 +11,14 @@
 ![image](https://github.com/user-attachments/assets/b1075a1a-91ce-4fc2-9968-8a7d02e6b10a)
 5.最终完成账户创建后，进入到Azure的界面。接下来我们需要创建订阅用于随用随付款订阅。
 ![image](https://github.com/user-attachments/assets/9e7669aa-85e4-4edf-ad4d-fd4ba976cea5)
-
+6.在界面中点击，Start AS freeTrail
+![image](https://github.com/user-attachments/assets/f2d83cdc-27bf-4ec2-b81d-14a94e5f9b72)
+7.选择PayASYOU GO
+![image](https://github.com/user-attachments/assets/e34d6257-f0e5-43d1-95a5-7f2afda71f70)
+8.输入电话号码后点击验证，这里无比填写正确的电话号码用于接收短信进行验证。
+![image](https://github.com/user-attachments/assets/1d418e0c-4dcb-4b99-9ec9-d4b25fcb255f)
+9.填写支付信息，这里需要填写双币信用卡进行验证，验证完成后我们可以点击Signup来进行订阅创建。
+![image](https://github.com/user-attachments/assets/4ec292d9-1fd1-4390-a000-917c9acb838b)
+完成订阅之后我们就可以开始进行Azure Translation Service创建了。
 
 
